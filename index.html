@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titulo do site</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="painel">
+        <h1>Você aceita sair comigo?</h1>
+
+        <img src="https://gifman.net/wp-content/uploads/2019/06/ursinhos-fofos-coracoes.gif" alt="">
+
+        <h2></h2>
+
+        <button id="sim" onclick="openModal()"> Sim! </button>
+        <button onclick="fuja()" id="nao"> Não! </button>
+
+    </div>
+
+    <!-- Modal de opções de datas -->
+    <div id="myModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Selecione uma data:</h3>
+            <input type="date" id="date">
+            <h3>Selecione uma hora:</h3>
+            <input type="time" id="time">
+            <h3>Seu nome:</h3>
+            <input type="text" id="name" placeholder="Digite seu nome aqui">
+            <button onclick="sendData()">Enviar</button>
+            <p id="statusMessage" style="display: none;"></p>
+            <!-- Adicionando um elemento para exibir mensagens de status -->
+        </div>
+    </div>
+
+    <!-- Importando o script JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
