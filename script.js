@@ -31,9 +31,12 @@ function sendData() {
     var selectedTime = document.getElementById("time").value;
     var selectedDateTime = selectedDate + " " + selectedTime;
 
+    var nome = document.getElementById("name").value;
+
     // Armazenar os dados em uma variável
     var dataToSave = {
-        dateTime: selectedDateTime
+        dateTime: selectedDateTime,
+        name: nome // Adicionando o nome aos dados a serem enviados
     };
 
     // Chamar a função para enviar os dados para o servidor

@@ -17,19 +17,19 @@ app.use((req, res, next) => {
     next();
 });
 
-// Rota para manipular solicitações GET
-app.get('/getRequest', (req, res) => {
-    res.send("Hello, this is a successful GET request");
-});
-
 // Rota para manipular solicitações POST
 app.post('/postRequest', (req, res) => {
     // Exibe os dados recebidos no console para fins de depuração
     console.log("Received data:", req.body);
 
+    // Acessando o nome enviado
+    const nome = req.body.name;
+    console.log("Name:", nome);
+
     // Envie uma resposta indicando que os dados foram recebidos com sucesso
     res.send("Data received successfully");
 });
+
 
 // Inicia o servidor na porta especificada
 app.listen(PORT, () => console.log(`Server is running on ${PORT}`));
